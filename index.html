@@ -1,12 +1,174 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
-  </head>
-  <body>
+<head>
+	<meta charset="UTF-8">
+	<title>Магазин Глейси</title>
+</head>
+<body>
+	<header class="main-header">
+		<div class="container">
+			<div class="logo">
+				<img src="http://placehold.it/150x100" width="150" height="100" alt="GllacyShop">
+			</div>
+			<nav class="main-navigation">
+				<ul>
+					<li>
+						<a href="#">Каталог</a>
+					</li>
+					<li>
+						<a href="#">Доставка и оплата</a>
+					</li>
+					<li>
+						<a href="#">О Компании</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="user-block">
+				<a class="search" href="#">Поиск</a>
+				<a class="login" href="#">Вход</a>
+				<a class="cart" href="#">Пусто</a>
+			</div>
+			<div class="header-contacts">
+				<span>C 10 до 20, ежедневно</span><br>
+				<span><b>8 812 450-25-25</b></span>
+			</div>
+		</div>
+	</header>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+	<main class="container">
+		<section class="slider">
+			<div class="slider-inner">
+				<div class="slider-slides">
+					<div class="slide-active">
+						<img src="http://placehold.it/150x100" width="150" height="100" alt="">
+						<h2>Крем-брюле и пломбир с малиновым джемом</h2>
+						<a href="#">Давайте оба!</a>
+					</div>
+					<div class="slide-active">
+						<img src="http://placehold.it/150x100" width="150" height="100" alt="">
+						<h2></h2>
+						<a href="#">Давайте оба!</a>
+					</div>
+					<div class="slide-active">
+						<img src="http://placehold.it/150x100" width="150" height="100" alt="">
+						<h2></h2>
+						<a href="#">Давайте оба!</a>
+					</div>
+				</div>
+			</div>
+			<input type="radio" id="btn-1" name="toggle" checked>
+			<input type="radio" id="btn-2" name="toggle">
+			<input type="radio" id="btn-3" name="toggle">
+			<div class="slider-controls">
+				<label for="btn-1"></label>
+				<label for="btn-2"></label>
+				<label for="btn-3"></label>
+			</div>
+		</section>
+		<section class="promo">
+			<div class="promo-item">
+				<h2>Малинка даром!</h2>
+				<p>Текст</p>
+				<a href="#">Хочу варенье!</a>
+			</div>
+			<div class="promo-item">
+				<h2>Шоколадки даром!</h2>
+				<p>Текст</p>
+				<a href="#">Хочу шоколадки!</a>
+			</div>
+		</section>
+		<section class="product">
+			<div class="product-item">
+				<img src="http://placehold.it/150x100" width="150" height="100" alt="">
+				<span><b>310 Р</b>/кг</span>
+				<a href="#">Текст</a>
+				<button type="button">Быстрый просмотр</button>
+			</div>
+			<div class="product-item">
+				<img src="http://placehold.it/150x100" width="150" height="100" alt="">
+				<span><b>380 Р</b>/кг</span>
+				<a href="#">Текст</a>
+				<button type="button">Быстрый просмотр</button>
+			</div>
+			<div class="product-item">
+				<img src="http://placehold.it/150x100" width="150" height="100" alt="">
+				<span><b>355 Р</b>/кг</span>
+				<a href="#">Текст</a>
+				<button type="button">Быстрый просмотр</button>
+			</div>
+			<div class="product-item">
+				<img src="http://placehold.it/150x100" width="150" height="100" alt="">
+				<span><b>415 Р</b>/кг</span>
+				<a href="#">Текст</a>
+				<button type="button">Быстрый просмотр</button>
+			</div>
+		</section>
+		<section class="features">
+			<h2>Текст</h2>
+			<div class="features-left">
+				<p>Текст</p>
+				<p>Текст</p>
+			</div>
+			<div class="features-right">
+				<p>Текст</p>
+				<p>Текст</p>
+			</div>
+		</section>
+		<div class="blog">
+			<span>Новое в нашем блоге</span>
+			<a href="#">Текст</a>
+		</div>
+		<div class="subscribe">
+			<p>Текст</p>
+				<form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+					<input type="email" name="email" placeholder="Электронная почта">
+					<button class="btn" type="submit">Отправить</button>
+				</form>
+		</div>
+		<section class="map-contacts">
+			<img src="http://placehold.it/150x100" width="150" height="100" alt="Карта проезда">
+			<div class="contacts-card">
+				<p>Адрес главного офиса<br>
+				и офлайн магазина:<br>
+				<b>ул. Большая Конюшенная<br>
+				19/8, Санкт-Петербург</b></p>
+				<p>Для заказов по телефону:<br>
+				<b>8 812 450-25-25</b><br>
+				(с 10 до 20 ежедневно)</p>
+				<button class="btn" type="button">Форма обратной связи</button>
+			</div>
+		</section>
+	</main>
 
-  </body>
+	<footer class="main-footer">
+		<section class="footer-social">
+			<a class="social-btn social-btn-tw" href="#">Твиттер</a>
+			<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+			<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+			<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+		</section>
+		<section class="footer-navigation">
+			<nav>
+				<ul>
+					<li>
+						<a href="#"><b>Для поставщиков</b></a>
+					</li>
+					<li>
+						<a href="#">Наши документы</a>
+					</li>
+					<li>
+						<a href="#">О производстве</a>
+					</li>
+					<li>
+						<a href="#">Экологические стандарты</a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+		<section class="footer-copyright">
+			<img src="http://placehold.it/150x100" width="150" height="100" alt="htmlacademy">
+			<span>Сделано в <a href="#">HTML Academy</a> © 2016</span>
+		</section>
+	</footer>
+</body>
 </html>
