@@ -1,3 +1,13 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
 body,
 h1,
 h2 {
@@ -21,4 +31,114 @@ h2 {
 	font-size: 35px;
 	line-height: 41px;
 	font-weight: bold;
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 27px;
+}
+
+.container,
+.promo,
+.product-list,
+.features,
+.extra-content {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.main-navigation {
+	width: 853px;
+}
+
+.user-block {
+	width: 267px;
+}
+
+.header-contacts {
+	width: 160px;
+	margin-left: auto;
+}
+
+.slider,
+.promo,
+.product-list,
+.features,
+.extra-content {
+	width: 1146px;
+	margin-bottom: 40px;
+}
+
+.promo-item {
+	width: 560px;
+	height: 230px;
+}
+
+.product-item {
+	width: 267px;
+	height: 323px;
+}
+
+.features-left,
+.features-right {
+	width: 540px;
+}
+
+.blog,
+.subscribe {
+	width: 560px;
+	height: 220px;
+}
+
+.map-contacts {
+	width: 1200px;
+	height: 430px;
+
+	display: flex;
+	align-items: center;
+}
+
+.contacts-card {
+	width: 302px;
+	height: 305px;
+	margin-left: auto;
+}
+
+.footer-social {
+	width: 267px;
+	padding-top: 40px;
+	padding-bottom: 30px;
+}
+
+.footer-navigation {
+	width: 560px;
+	padding-top: 40px;
+	padding-bottom: 30px;
+}
+
+.footer-copyright {
+	width: 267px;
+	padding-top: 20px;
+	padding-bottom: 25px;
+}
+
+.content-header {
+	width: 1146px;
+}
+
+.filters {
+	width: 860px;
+	margin-bottom: 40px;
+}
+
+.pagination {
+	margin-bottom: 30px;
+	margin-left: auto;
+	width: 194px;
+}
+
+[class$="-popup"] {
+	display: none;
 }
