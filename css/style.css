@@ -215,7 +215,7 @@ ul.main-menu {
   border-radius: 20px;
 }
 
-.main-menu li:hover > a {
+li:hover > a {
   color: #333333;
   text-decoration: none;
 
@@ -704,6 +704,10 @@ li.active-page-item {
 }
 
 .cart > .btn {
+  margin-left: -3px;
+  padding-right: 33px;
+  padding-left: 45px;
+
   background: rgba(255, 255, 255, 0.2) url("../img/icon-cart.png") no-repeat 13px 50%;
 }
 
@@ -711,6 +715,7 @@ li.active-page-item {
   margin-right: -20px;
   margin-left: -4px;
   padding-right: 18px;
+  padding-left: 41px;
 
   color: #323232;
 
@@ -948,11 +953,12 @@ table.cart-order {
 }
 
 .features {
+  margin-bottom: 38px;
   padding: 20px;
 
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 23px;
   color: #323232;
 
   background: url("../img/fone-pattern-1.jpg");
@@ -1623,7 +1629,7 @@ table.cart-order {
 
 .footer-navigation-left {
   display: inline-block;
-  width: 150px;
+  width: 140px;
 
   vertical-align: middle;
 }
@@ -1631,7 +1637,6 @@ table.cart-order {
 .footer-navigation-right {
   display: inline-block;
   width: 200px;
-  margin-left: -10px;
 
   vertical-align: middle;
 }
@@ -1745,13 +1750,13 @@ table.cart-order {
 }
 
 .pagination a:first-child {
-  background: url(../img/icon-arrow.png) no-repeat 100% 50%;
+  background: url("../img/icon-arrow.png") no-repeat 100% 50%;
   transform: rotate(180deg);
   opacity: 0.2;
 }
 
 .pagination a:last-child {
-  background: url(../img/icon-arrow.png) no-repeat 100% 50%;
+  background: url("../img/icon-arrow.png") no-repeat 100% 50%;
 }
 
 .pagination .active-page,
