@@ -18,17 +18,17 @@
 								<img src="img/logo.png" width="154" height="64" alt="GllacyShop">
 							</a>
 						</div>
-						<ul>
-							<li>
-								<a class="active-page" href="#">Каталог</a>
+						<ul class="main-menu">
+							<li class="active-page">
+								<a href="#">Каталог</a>
 								<div class="submenu">
 									<ul>
 										<li>
 											<a href="#"><b>Новинки</b></a>
 											<hr>
 										</li>
-										<li>
-											<a class="active-page-item" href="#">Сливочное</a>
+										<li class="active-page-item">
+											<a href="#">Сливочное</a>
 										</li>
 										<li>
 											<a href="#">Щербеты</a>
@@ -131,16 +131,16 @@
 					<form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
 						<div class="first-line-filter">
 							<div class="filter-item">
-								<span>Сортировка:</span><br>
+								<span>Сортировка:</span>
 								<select class="select-sort" name="sort" id="sort">
-									<option value="popular">По популярности</option>
-									<option value="inexpensive">Сначала недорогие</option>
-									<option value="expensive">Сначала дорогие</option>
-									<option value="fatness">По жирности</option>
+									<option value="popular">по популярности</option>
+									<option value="inexpensive">сначала недорогие</option>
+									<option value="expensive">сначала дорогие</option>
+									<option value="fatness">по жирности</option>
 								</select>
 							</div>
 							<div class="filter-item">
-								<span>Цена: 100 руб. – 500 руб.</span><br>
+								<span>Цена: 100 руб. – 500 руб.</span>
 								<div class="range-controls">
 									<div class="scale">
 										<div class="bar"></div>
@@ -150,26 +150,22 @@
 								</div>
 							</div>
 							<div class="filter-item">
-								<span>Жирность:</span><br>
+								<span>Жирность:</span>
 									<div class="filter-item-wrapper">
 										<div class="filter-item-option first-of-line">
 											<input type="radio" name="fatness" value="zero" id="zero">
-											<span class="checkbox-indicator"></span>
 											<label for="zero">0%</label>
 										</div>
 										<div class="filter-item-option">
 											<input type="radio" name="fatness" value="to-10" id="to-10" checked>
-											<span class="checkbox-indicator"></span>
 											<label for="to-10">до 10%</label>
 										</div>
 										<div class="filter-item-option">
 											<input type="radio" name="fatness" value="to-30" id="to-30">
-											<span class="checkbox-indicator"></span>
 											<label for="to-30">до 30%</label>
 										</div>
 										<div class="filter-item-option">
 											<input type="radio" name="fatness" value="from-30" id="from-30">
-											<span class="checkbox-indicator"></span>
 											<label for="from-30">выше 30%</label>
 										</div>
 									</div>
@@ -177,31 +173,26 @@
 						</div>
 						<div class="second-line-filter">
 							<div class="filter-item">
-								<span>Наполнители:</span><br>
+								<span>Наполнители:</span>
 								<div class="filter-item-wrapper">
 									<div class="filter-item-option first-of-line">
 										<input type="checkbox" id="chokolate" name="chokolate">
-										<span class="checkbox-indicator"></span>
 										<label for="chokolate">шоколадные</label>
 									</div>
 									<div class="filter-item-option">
 										<input type="checkbox" id="sugar" name="sugar">
-										<span class="checkbox-indicator"></span>
 										<label for="sugar">сахарные присыпки</label>
 									</div>
 									<div class="filter-item-option">
 										<input type="checkbox" id="fruit" name="fruit">
-										<span class="checkbox-indicator"></span>
 										<label for="fruit">фрукты</label>
 									</div>
 									<div class="filter-item-option">
 										<input type="checkbox" id="syrup" name="syrup">
-										<span class="checkbox-indicator"></span>
 										<label for="syrup">сиропы</label>
 									</div>
 									<div class="filter-item-option">
 										<input type="checkbox" id="jam" name="jam">
-										<span class="checkbox-indicator"></span>
 										<label for="jam">джемы</label>
 									</div>
 								</div>
