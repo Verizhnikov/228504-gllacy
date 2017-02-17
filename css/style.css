@@ -215,7 +215,7 @@ ul.main-menu {
   border-radius: 20px;
 }
 
-li:hover > a {
+li.menu-item:hover > a {
   color: #333333;
   text-decoration: none;
 
