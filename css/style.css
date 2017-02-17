@@ -952,9 +952,12 @@ table.cart-order {
   z-index: 50;
 }
 
+
+
 .features {
-  margin-bottom: 38px;
+  margin-bottom: 40px;
   padding: 20px;
+  padding-bottom: 17px;
 
   font-weight: 400;
   font-size: 16px;
@@ -963,6 +966,24 @@ table.cart-order {
 
   background: url("../img/fone-pattern-1.jpg");
   border-radius: 15px;
+}
+
+.features-item {
+  float: left;
+  width: 540px;
+  position: relative;
+  padding-left: 58px;
+  line-height: 22px;
+}
+
+.features-item img {
+  position: absolute;
+  left: 0;
+  top: 1px;
+}
+
+.features-item p {
+  margin-bottom: 6px;
 }
 
 .features h2 {
@@ -974,72 +995,6 @@ table.cart-order {
   font-size: 24px;
   line-height: 30px;
   text-align: justify;
-}
-
-.features-left,
-.features-right {
-  position: relative;
-
-  width: 540px;
-  padding-left: 58px;
-}
-
-.features-left p:first-child,
-.features-right p:first-child {
-  margin-bottom: 23px;
-}
-
-.features-left p:last-child,
-.features-right p:last-child {
-  margin-bottom: 5px;
-}
-
-.features-left::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-
-  width: 49px;
-  height: 49px;
-
-  background: url("../img/icon-cream.png") no-repeat;
-}
-
-.features-left::after {
-  content: "";
-  position: absolute;
-  top: 91px;
-  left: 2px;
-
-  width: 49px;
-  height: 49px;
-
-  background: url("../img/icon-sheet.png") no-repeat;
-}
-
-.features-right::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-
-  width: 49px;
-  height: 49px;
-
-  background: url("../img/icon-cow.png") no-repeat;
-}
-
-.features-right::after {
-  content: "";
-  position: absolute;
-  top: 91px;
-  left: 2px;
-
-  width: 49px;
-  height: 49px;
-
-  background: url("../img/icon-therm.png") no-repeat;
 }
 
 .blog,
@@ -1063,20 +1018,15 @@ table.cart-order {
   background: url("../img/content-fone.jpg") no-repeat;
 }
 
-.blog span {
-  padding-right: 100px;
+.blog h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-family: "Roboto", "Arial", sans-serif;
+  margin-top: 2px;
 }
 
 .blog a {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
-  font-family: "Roboto", "Arial", sans-serif;
   color: #323232;
-  text-decoration: none;
-  word-spacing: 4px;
-
-  border-bottom: 2px solid #353535;
 }
 
 .blog a:hover,
