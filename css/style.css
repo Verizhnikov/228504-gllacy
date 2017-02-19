@@ -21,6 +21,11 @@ body > input[type="radio"] {
   display: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 h1 {
   font-weight: bold;
   font-size: 35px;
@@ -308,11 +313,18 @@ li.active-page {
   border: none;
 }
 
-.submenu hr {
-  width: 128px;
-  margin-bottom: 2px;
+.submenu li:nth-child(1) {
+  padding-bottom: 8px;
+}
 
-  border: none;
+.submenu::before {
+  content: "";
+  position: absolute;
+  top: 44px;
+  left: 8px;
+
+  width: 128px;
+
   border-bottom: 1px solid #323232;
   opacity: 0.2;
 }
@@ -373,15 +385,38 @@ li.active-page-item {
   width: 100%;
   padding: 10px 13px;
 
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 16px;
   line-height: 24px;
   font-family: "Roboto", "Arial", sans-serif;
-  color: #999999;
+  color: #323232;
 
   background-color: #ffffff;
   border: 2px solid rgba(211, 211, 210, 0.4);
   border-radius: 5px;
+  outline: none;
+}
+
+.field-item {
+    position: relative;
+}
+
+.search-popup label,
+.login-popup label {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    position: absolute;  
+    z-index: 100;
+    top: 11px;
+    left: 13px;
+}
+
+input.field-item-focus:focus + label {
+    color: #5b9ddf;
+    font-size: 11px;
+    line-height: 13px;
+    top: -15px;
 }
 
 .search-popup input:hover,
@@ -524,11 +559,35 @@ li.active-page-item {
   font-size: 16px;
   line-height: 24px;
   font-family: "Roboto", "Arial", sans-serif;
-  color: #999999;
+  color: #323232;
 
   background-color: #ffffff;
   border: 2px solid rgba(211, 211, 210, 0.4);
   border-radius: 5px;
+  outline: none;
+}
+
+.feedback-field-item {
+    position: relative;
+}
+
+.feedback-popup label {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    position: absolute;  
+    z-index: 110;
+    top: 29px;
+    left: 13px;
+    color: #999999;
+}
+
+input.feedback-item-focus:focus + label,
+textarea.feedback-item-focus:focus + label {
+    color: #5b9ddf;
+    font-size: 11px;
+    line-height: 13px;
+    top: 2px;
 }
 
 .feedback-popup input:hover,
@@ -754,6 +813,18 @@ table.cart-order {
   padding-left: 4px;
 }
 
+.cart-total::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 7px;
+
+  width: 510px;
+
+  border-bottom: 1px solid #323232;
+  opacity: 0.2;
+}
+
 .header-contacts {
   width: 180px;
   margin-top: -9px;
@@ -771,6 +842,7 @@ table.cart-order {
   font-weight: 700;
   font-size: 22px;
   line-height: 24px;
+  vertical-align: middle;
 }
 
 .promo,
@@ -784,14 +856,15 @@ table.cart-order {
   position: relative;
 
   width: 560px;
-  height: 230px;
+  min-height: 230px;
   padding: 20px;
+    padding-bottom: 100px;
 
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
 
-  border-radius: 16px;
+  border-radius: 20px;
 }
 
 .promo-item h2 {
@@ -804,11 +877,13 @@ table.cart-order {
 }
 
 .promo-item-left {
-  background: url("../img/promo-fone-1.jpg") no-repeat;
+  background: #a61c36 url("../img/promo-fone-1.jpg") no-repeat;
+    background-size: 100% 100%;
 }
 
 .promo-item-right {
-  background: url("../img/promo-fone-2.jpg") no-repeat;
+  background: #5e3b2b url("../img/promo-fone-2.jpg") no-repeat;
+    background-size: 100% 100%;
 }
 
 .promo-item .btn {
@@ -835,7 +910,7 @@ table.cart-order {
   position: relative;
 
   width: 267px;
-  height: 323px;
+  min-height: 323px;
   margin-bottom: 40px;
 
   text-align: center;
@@ -855,7 +930,7 @@ table.cart-order {
 
 .product-item span {
   position: absolute;
-  bottom: 65px;
+  top: 208px;
   left: 1px;
 
   font-weight: 700;
@@ -885,7 +960,6 @@ table.cart-order {
   bottom: -10px;
 
   width: 25px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -910,7 +984,7 @@ table.cart-order {
   z-index: 20;
 
   width: 293px;
-  height: 405px;
+  min-height: 405px;
 
   background-color: rgba(248, 247, 244, 0.3);
   border-radius: 5px;
@@ -965,7 +1039,7 @@ table.cart-order {
   line-height: 23px;
   color: #323232;
 
-  background: url("../img/fone-pattern-1.jpg");
+  background: #eadbbd url("../img/fone-pattern-1.jpg");
   border-radius: 15px;
 }
 
@@ -1003,7 +1077,7 @@ table.cart-order {
 .blog,
 .subscribe {
   width: 560px;
-  height: 220px;
+  min-height: 220px;
 
   border-radius: 14px 15px 15px 14px;
 }
@@ -1018,7 +1092,8 @@ table.cart-order {
   font-family: "Roboto", "Arial", sans-serif;
   color: #323232;
 
-  background: url("../img/content-fone.jpg") no-repeat;
+  background: #ffffff url("../img/content-fone.jpg") no-repeat;
+    background-size: 100% 100%;
 }
 
 .blog h3 {
@@ -1031,6 +1106,8 @@ table.cart-order {
 
 .blog a {
   color: #323232;
+    text-decoration: none;
+ border-bottom: 2px solid #323232;
 }
 
 .blog a:hover,
@@ -1041,8 +1118,7 @@ table.cart-order {
 }
 
 .subscribe {
-  position: relative;
-
+  position: relative; 
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -1050,6 +1126,7 @@ table.cart-order {
   color: #5a5a5a;
 
   background: #f8f7f4 url("../img/fone-pattern-2.png");
+    padding: 5px;
 }
 
 .subscribe p {
@@ -1059,8 +1136,8 @@ table.cart-order {
 
 .subscribe .btn {
   position: absolute;
-  right: 18px;
-  bottom: 37px;
+  right: 22px;
+  bottom: 40px;
 
   padding: 10px 19px;
 
@@ -1078,17 +1155,17 @@ table.cart-order {
 }
 
 .subscribe .wrapper {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-
   width: 549px;
-  height: 210px;
   padding: 20px;
   padding-right: 17px;
+    padding-bottom: 35px;
 
   background-color: #f8f7f4;
   border-radius: 9px;
+}
+
+.subscribe-field-item {
+    position: relative;
 }
 
 .subscribe input {
@@ -1096,12 +1173,32 @@ table.cart-order {
   margin-top: 22px;
   margin-left: 3px;
   padding: 11px 13px;
+    color: #323232;
 
   font-family: "Roboto", "Arial", sans-serif;
 
   background-color: #ffffff;
   border: 2px solid rgba(211, 211, 210, 0.4);
   border-radius: 5px;
+  outline: none;
+}
+
+.subscribe label {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    position: absolute;  
+    z-index: 100;
+    top: 31px;
+    left: 16px;
+    color: #999999;
+}
+
+input.subscribe-item-focus:focus + label {
+    color: #5b9ddf;
+    font-size: 11px;
+    line-height: 13px;
+    top: 5px;
 }
 
 .subscribe input:hover {
@@ -1118,9 +1215,10 @@ table.cart-order {
   display: flex;
   align-items: center;
   width: 1200px;
-  height: 430px;
+  min-height: 430px;
 
-  background: url("../img/map.png") no-repeat;
+  background: #f7f1d9 url("../img/map.png") no-repeat;
+    background-size: 100% 100%;
 }
 
 .map-contacts::before {
@@ -1139,11 +1237,11 @@ table.cart-order {
   position: relative;
 
   width: 302px;
-  height: 305px;
+  min-height: 305px;
   margin-right: 27px;
   margin-left: auto;
   padding: 14px 25px;
-
+padding-bottom: 75px;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -1726,6 +1824,6 @@ table.cart-order {
   display: none;
 }
 
-select::-ms-expand {
+.filter-item select::-ms-expand {
   display: none;
 }

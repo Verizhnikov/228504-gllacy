@@ -26,7 +26,6 @@
 									<ul>
 										<li>
 											<a href="#"><b>Новинки</b></a>
-											<hr>
 										</li>
 										<li>
 											<a href="catalog.html">Сливочное</a>
@@ -56,7 +55,10 @@
 							<button class="btn" type="button">Поиск</button>
 							<div class="search-popup">
 								<form class="search-field" action="https://echo.htmlacademy.ru" method="post">
-									<input type="search" name="search" placeholder="Что ищем?">
+									<div class="field-item">
+										<input class="field-item-focus" type="search" name="search" id="search">
+										<label for="search">Что ищем?</label>
+									</div>
 								</form>
 							</div>
 						</div>
@@ -64,8 +66,14 @@
 							<button class="btn" type="button">Вход</button>
 							<div class="login-popup">
 								<form class="login-field" action="https://echo.htmlacademy.ru" method="post">
-									<input type="email" placeholder="Электронная почта">
-									<input type="password" placeholder="Пароль">
+									<div class="field-item">
+										<input class="field-item-focus" type="email" id="email">
+										<label for="email">Электронная почта</label>
+									</div>	
+									<div class="field-item">
+										<input class="field-item-focus" type="password" id="pass">
+										<label for="pass">Пароль</label>
+									</div>
 									<button class="btn" type="submit">Войти</button>
 									<div class="authorization">
 										<a href="#">Забыли пароль?</a>
@@ -180,7 +188,10 @@
 						<div class="wrapper">
 							<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 							<form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-								<input type="email" name="email" placeholder="Электронная почта">
+								<div class="subscribe-field-item">
+									<input class="subscribe-item-focus" type="email" name="email" id="email2">
+									<label for="email2">Электронная почта</label>
+								</div>
 								<button class="btn" type="submit">Отправить</button>
 							</form>
 						</div>
@@ -202,9 +213,18 @@
 						<div class="feedback-popup">
 							<span>Мы обязательно вам ответим!</span>
 							<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-								<input type="text" name="name" id="name" placeholder="Как вас зовут?">
-								<input type="email" name="email" id="email" placeholder="Ваша почта для ответа?">
-								<textarea name="description" id="description" cols="50" rows="5">Напишите что-нибудь...</textarea>
+								<div class="feedback-field-item">
+									<input class="feedback-item-focus" type="text" name="name" id="name2">
+									<label for="name2">Как вас зовут?</label>
+								</div>
+								<div class="feedback-field-item">
+									<input class="feedback-item-focus" type="email" name="email" id="email3">
+									<label for="email3">Ваша почта для ответа?</label>
+								</div>
+								<div class="feedback-field-item">
+									<textarea class="feedback-item-focus" name="description" id="description" cols="50" rows="5"></textarea>
+									<label for="description">Напишите что-нибудь...</label>
+								</div>
 								<button class="btn" type="submit">Отправить</button>
 								<button class="btn-exit" type="button"></button>
 							</form>
