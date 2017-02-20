@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<title>Магазин Глейси</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 	<input type="radio" id="btn-1" name="toggle" checked>
@@ -26,7 +26,6 @@
 									<ul>
 										<li>
 											<a href="#"><b>Новинки</b></a>
-											<hr>
 										</li>
 										<li>
 											<a href="catalog.html">Сливочное</a>
@@ -56,7 +55,10 @@
 							<button class="btn" type="button">Поиск</button>
 							<div class="search-popup">
 								<form class="search-field" action="https://echo.htmlacademy.ru" method="post">
-									<input type="search" name="search" placeholder="Что ищем?">
+									<div class="field-item">
+										<input class="field-item-focus" type="search" name="search" id="search">
+										<label for="search">Что ищем?</label>
+									</div>
 								</form>
 							</div>
 						</div>
@@ -64,8 +66,14 @@
 							<button class="btn" type="button">Вход</button>
 							<div class="login-popup">
 								<form class="login-field" action="https://echo.htmlacademy.ru" method="post">
-									<input type="email" placeholder="Электронная почта">
-									<input type="password" placeholder="Пароль">
+									<div class="field-item">
+										<input class="field-item-focus" type="email" id="email">
+										<label for="email">Электронная почта</label>
+									</div>	
+									<div class="field-item">
+										<input class="field-item-focus" type="password" id="pass">
+										<label for="pass">Пароль</label>
+									</div>
 									<button class="btn" type="submit">Войти</button>
 									<div class="authorization">
 										<a href="#">Забыли пароль?</a>
@@ -155,32 +163,35 @@
 				<section class="features">
 					<h2>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
 					<div class="features-item">
-            <img src="img/icon-cream.png" width="49" height="49" alt="">
+						<img src="img/icon-cream.png" width="49" height="49" alt="">
 						<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
 					</div>
 					<div class="features-item">
-            <img src="img/icon-cow.png" width="49" height="49" alt="">
-						<p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+						<img src="img/icon-cow.png" width="49" height="49" alt="">
+						<p>Закупка ингредиентов	производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
 					</div>
-          <div class="features-item">
-            <img src="img/icon-sheet.png" width="49" height="49" alt="">
-            <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-          </div>
-          <div class="features-item">
-            <img src="img/icon-therm.png" width="49" height="49" alt="">
-            <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
-          </div>
+					<div class="features-item">
+						<img src="img/icon-sheet.png" width="49" height="49" alt="">
+						<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+					</div>
+					<div class="features-item">
+						<img src="img/icon-therm.png" width="49" height="49" alt="">
+						<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+					</div>
 				</section>
 				<section class="extra-content">
 					<div class="blog">
 						<span>Новое в нашем блоге</span>
-						<h3><a href="#">10  способов сервировки фруктовых щербетов к столу</a></h3>
+						<h3><a href="#">10 способов сервировки фруктовых щербетов к столу</a></h3>
 					</div>
 					<div class="subscribe">
 						<div class="wrapper">
 							<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 							<form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-								<input type="email" name="email" placeholder="Электронная почта">
+								<div class="subscribe-field-item">
+									<input class="subscribe-item-focus" type="email" name="email" id="email2">
+									<label for="email2">Электронная почта</label>
+								</div>
 								<button class="btn" type="submit">Отправить</button>
 							</form>
 						</div>
@@ -198,13 +209,22 @@
 					<b>8 812 450-25-25</b>
 					<p>(с 10 до 20 ежедневно)</p>
 					<div class="feedback">
-						<button class="btn" type="button">Форма обратной связи</button>
+						<a href="feedback.html" class="btn">Форма обратной связи</a>
 						<div class="feedback-popup">
 							<span>Мы обязательно вам ответим!</span>
 							<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-								<input type="text" name="name" id="name" placeholder="Как вас зовут?">
-								<input type="email" name="email" id="email" placeholder="Ваша почта для ответа?">
-								<textarea name="description" id="description" cols="50" rows="5">Напишите что-нибудь...</textarea>
+								<div class="feedback-field-item">
+									<input class="feedback-item-focus" type="text" name="name" id="name2">
+									<label for="name2">Как вас зовут?</label>
+								</div>
+								<div class="feedback-field-item">
+									<input class="feedback-item-focus" type="email" name="email" id="email3">
+									<label for="email3">Ваша почта для ответа?</label>
+								</div>
+								<div class="feedback-field-item">
+									<textarea class="feedback-item-focus" name="description" id="description" cols="50" rows="5"></textarea>
+									<label for="description">Напишите что-нибудь...</label>
+								</div>
 								<button class="btn" type="submit">Отправить</button>
 								<button class="btn-exit" type="button"></button>
 							</form>
@@ -212,6 +232,7 @@
 					</div>
 					<div class="modal-overlay"></div>
 				</div>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="1200" height="430" style="border:0" allowfullscreen></iframe>
 			</section>
 
 			<footer class="main-footer">
@@ -248,5 +269,6 @@
 			</footer>
 		</div>
 	</div>
+	<script src="js/script.min.js"></script>
 </body>
 </html>

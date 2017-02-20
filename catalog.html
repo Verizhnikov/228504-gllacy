@@ -25,7 +25,6 @@
 									<ul>
 										<li>
 											<a href="#"><b>Новинки</b></a>
-											<hr>
 										</li>
 										<li class="active-page-item">
 											<a href="#">Сливочное</a>
@@ -55,7 +54,10 @@
 							<button class="btn" type="button">Поиск</button>
 							<div class="search-popup">
 								<form class="search-field" action="https://echo.htmlacademy.ru" method="post">
-									<input type="search" name="search" placeholder="Что ищем?">
+									<div class="field-item">
+										<input class="field-item-focus" type="search" name="search" id="search">
+										<label for="search">Что ищем?</label>
+									</div>
 								</form>
 							</div>
 						</div>
@@ -63,8 +65,14 @@
 							<button class="btn" type="button">Вход</button>
 							<div class="login-popup">
 								<form class="login-field" action="https://echo.htmlacademy.ru" method="post">
-									<input type="email" placeholder="Электронная почта">
-									<input type="password" placeholder="Пароль">
+									<div class="field-item">
+										<input class="field-item-focus" type="email" id="email">
+										<label for="email">Электронная почта</label>
+									</div>	
+									<div class="field-item">
+										<input class="field-item-focus" type="password" id="pass">
+										<label for="pass">Пароль</label>
+									</div>
 									<button class="btn" type="submit">Войти</button>
 									<div class="authorization">
 										<a href="#">Забыли пароль?</a>
@@ -93,7 +101,6 @@
 											<td>450 руб.</td>
 										</tr>
 									</table>
-									<hr>
 									<table class="cart-total">
 										<tr>
 											<td>Итого:</td>
